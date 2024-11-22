@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+    scroll-behavior: smooth;
+}
+
+/*
+CSS variables
+think of root as a container for variable it can contain values like sizes, color, and so-on.
+
+usually use to easly change a values that's repited to the whole website. like colors and various sizes of content
+*/
+:root {
+    --web-background-color: #f2f2f2;
+    --default-font-color: #2f2f2f;
+
+    --h1-font-size: 7rem;
+    --h2-font-size: 2rem;
+    --head-pharagraph: 20px;
+
+    --pharagraph-size: 18px;
+    --line-spacing: 1.2rem;
+    --letter-spacing: 1.5px;
+    --word-spacing: 2px;
+
+    --nav-bar-animation-duration: 400ms;
+
+    --web-topbottom-margin: 8rem;
+    --web-side-margin: 13rem;
+}
+
+
+
+
+
+
+/*
+===================================================================
+                            universal css
+    universal css is a collection of classes that has a set values,
+utillized like a css variable. Implemented by using the classes and 
+puting them in tags as their class. so if you change 1 value inside
+one universal css all of the tags that has that class will also change.
+===================================================================
+*/
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--web-background-color);
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+
+    padding: 1rem 2rem;
+
+    h2 {
+        font-weight: lighter;
+        color: var(--default-font-color);
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        font-size: var(--h2-font-size);
+    }
+}
+
+.link-button {
+    border: 2px solid #3ea8e6;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+
+    color: var(--default-font-color);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    transition: 0.5s;
+}
+
+.link-button:hover {
+    scale: 1.02;
+    letter-spacing: 3px;
+    background-color: #3ea8e6;
+    color: #f2f2f2;
+}
+
+.link-button:focus {
+    background-color: #3ea8e6;
+    color: #f2f2f2;
+}
+
+.active-button {
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: var(--default-font-color);
+    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+    position: relative;
+    transition: var(--nav-bar-animation-duration);
+
+    ::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        border-radius: 50px;
+        background-color: #3ea8e6;
+        scale: 1.1;
+    }
+}
+
+
+
+
+
+
+
+body {
+
+    p {
+        line-height: var(--line-spacing);
+        letter-spacing: var(--letter-spacing);
+        word-spacing: var(--word-spacing);
+    }
+    
+    .pattern {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    
+        z-index: -1;
+
+        background-color: #f7f7f7;
+        background-image: radial-gradient(#d7eaf5 2px, #f7f7f7 2px);
+        background-size: 60px 60px;
+        background-attachment: fixed;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Nav bar CSS 
+--------------------------------------------------------*/
+.nav-container {
+    width: 100%;
+    background-color: #f2f2f2df;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 100;
+}
+
+.line {
+    /* border: 2px solid red; */
+    padding: 0rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.line::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg ,#f2f2f2df, #2f2f2f, #2f2f2f, #2f2f2f, #f2f2f2df);
+}
+
+.LOGO img {
+    width: auto; 
+    height: 50px; 
+    max-width: 100%; 
+    object-fit: contain; 
+}
+
+
+
+.nav-content {
+    /* Flex display the content in a linear orientation, i recommend learning it in w3schools*/
+    display: flex; 
+    justify-content: space-evenly; /*Align items on x axis or left and right will only work if you have display flex*/
+    align-items: center; /*Align items on y axis or up and down*/
+    width: 50%;
+
+}
+
+.nav-content > a {
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: var(--default-font-color);
+    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+    position: relative;
+    transition: var(--nav-bar-animation-duration);
+}
+
+/* animation components */
+.nav-content > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--default-font-color);
+    border-radius: 50px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: var(--nav-bar-animation-duration);
+}
+
+.nav-content > a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-content > a:focus::after {
+    transform: scaleX(1);
+    background-color: #3ea8e6;
+}
+
+.nav-content > a:focus{
+    color: #3ea8e6;
+    scale: 1.1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Heading CSS 
+--------------------------------------------------------*/
+header {
+    background-image: url(../img/back-drop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 110vh;
+
+    font-size: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-content {
+    text-align: center;
+}
+
+.heading-container {
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient( #f2f2f26b, #f2f2f26b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-content > h1 {
+    color: var(--default-font-color);
+    text-shadow: 0rem 0rem 0.5rem #f2f2f2;
+
+    font-size: var(--h1-font-size);
+    font-family: monospace;
+    font-weight: lighter;
+    letter-spacing: 0.7rem;
+    word-spacing: 2rem;
+}
+
+.heading-content > p {
+    color: var(--default-font-color);
+    text-shadow: 0rem 0rem 0.5rem #f2f2f2;
+
+    font-size: var(--head-pharagraph);
+    font-weight: bold;
+    letter-spacing: 5px;
+    word-spacing: 0.7rem;            
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Web description CSS 
+--------------------------------------------------------*/
+.web-description{
+    background-color: var(--web-background-color);
+    display: flex;
+    margin: -5rem var(--web-side-margin) 0rem var(--web-side-margin);
+    height: 30vh;
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+
+    padding: 0.3rem;
+}
+
+.web-description > .img {
+    width: 30%;
+    height: auto;
+    background-image: url(../img/back-drop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.web-description > .disc{
+    width: 100%;
+    padding: 2rem 3rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.disc > h1 {
+    width: fit-content;
+    letter-spacing: 2px;
+}
+
+.disc > p {
+    font-size: var(--pharagraph-size);
+    letter-spacing: var(--letter-spacing);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    categorize galleries
+--------------------------------------------------------*/
+.categorize-galleries {
+    /* border: 2px solid red; */
+    margin: 8rem var(--web-side-margin) var(--web-topbottom-margin) var(--web-side-margin);
+
+    div {
+        /* border: 2px solid red; */
+        height: auto;
+    }
+}
+
+.galleries {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2rem 1rem;
+}
+
+.galleries > div {
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    height: 50vh;
+    width: 28%;
+
+    background: var(--web-background-color);
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.galleries > div > h3 {
+    /* border: 2px solid red; */
+    font-weight: lighter;
+    letter-spacing: 2px;
+    color: var(--default-font-color);
+    text-align: center;
+    transform: translateY( 5rem);
+    transition: 0.5s;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY( 4rem);
+    transition: 0.5s 0.5s;
+
+    height: auto;
+    width: auto;             
+}
+
+/* animation */
+.galleries > div:hover {
+    scale: 1.02;
+
+    h3 {
+        letter-spacing: 5px;
+    }
+
+    .card-button {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                        About
+--------------------------------------------------------*/
+.about {
+    margin: var(--web-topbottom-margin) var(--web-side-margin);
+    color: var(--default-font-color);
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 2rem 1rem;
+    div {
+        height: 45vh;
+        width: 48%;
+    }
+}
+
+.about-img  {
+    background-image: url(../img/back-drop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.about-content{
+    background-color: var(--web-background-color);
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+
+    padding: 2rem 1rem;
+    gap: 1rem;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    'title title title'
+    'desc desc desc'
+    '.... link ....'
+    ;
+
+    h2 {
+        grid-area: title;
+        font-size: var(--h2-font-size);
+    }
+
+    p {
+        grid-area: desc;
+        text-align: justify ;
+        font-size: var(--pharagraph-size);
+    }
+
+    a {
+        font-size: var(--pharagraph-size);
+        grid-area: link;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Styles and Approach
+--------------------------------------------------------*/
+.s-a {
+    margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    color: var(--default-font-color);
+}
+
+.s-a-container{
+    background: var(--web-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+    div {
+        height: 40vh;
+    }
+}
+
+.s-a-content {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-areas: 
+    '.... .... ....'
+    's-a-h2 s-a-h2 s-a-h2'
+    's-a-p s-a-p s-a-p'
+    '.... .... ....'
+    ;
+    padding: 1rem 2rem;
+    width: 60%;
+
+    h2 {
+        grid-area: s-a-h2;
+        font-size: var(--h2-font-size);
+    }
+
+    p {
+        grid-area: s-a-p;
+        font-size: var(--pharagraph-size);
+    }
+}
+
+.s-a-img {
+    width: 40%;
+    background-image: url(../img/back-drop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                        Footer
+--------------------------------------------------------*/
+footer {
+    margin: var(--web-topbottom-margin) 0 0 0;
+    background-color: #2f2f2f;
+    color: #f2f2f2;
+}
+
+.footer-offer {
+    display: flex;
+    justify-content: centers;
+    align-items: center;
+    height: 35vh;
+    position: relative;
+    
+    div {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.footer-offer> div:nth-child(1) {
+    /* background-color: blue; */
+    width: 100%;
+    letter-spacing: 3px;
+
+    a {
+        color: #f2f2f2;
+    }
+}
+
+.footer-offer > div > h2 {
+    letter-spacing: 2px;
+    font-size: var(--h2-font-size);
+}
+
+.footer-offer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg ,#2f2f2fdf,#2f2f2fdf, #f2f2f2, #f2f2f2, #f2f2f2,#2f2f2fdf, #2f2f2fdf);
+    position: absolute;
+}
+
+.socials {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.social-link {
+    h3 {
+        letter-spacing: 2px;
+        margin-bottom: 0.6rem;
+    }
+
+    a {
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: 0 0.6rem;
+
+        transition: 0.5s;
+    }
+}
+
+.social-link > a:hover{
+    color: #3ea8e6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 320px) {
+
+}

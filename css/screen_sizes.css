@@ -1,0 +1,684 @@
+/*
+----------------------------------------------
+        Loptop screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 1024px){
+    :root {
+        --h1-font-size: 6rem;
+        --h2-font-size: 1.8rem;
+        --head-pharagraph: 16px; 
+
+        --pharagraph-size: 13px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 5rem;
+    }
+
+    /* about */
+    .about-container {
+
+        div {
+            height: 50vh;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Tablet screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 768px){
+    :root {
+        --h1-font-size: 6rem;
+        --h2-font-size: 1.8rem;
+        --head-pharagraph: 16px; 
+
+        --pharagraph-size: 13px;
+        --letter-spacing: 0px;
+        --word-spacing: 0px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 5rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 3rem;
+    }
+
+
+    
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+
+        .disc {
+            width: 60%;
+
+            h1 {
+                font-size: 1.4rem;
+                margin: 0 0 1rem 0;
+            }
+        }
+
+        .img {
+            width: 40%;
+        }
+    }
+
+
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+
+    }
+
+    .galleries > div {
+        width: 30vw;
+        height: 35vh;
+        margin: 0px 0.5rem;
+        padding: 0rem 0.5rem;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 3.5rem);
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+
+        div {
+            height: 45vh;
+        }
+
+        .about-content {
+            width: 60%;
+
+            a {
+                font-size: var(--pharagraph-size);
+            }
+        }
+
+        .about-img {
+            width: 40%;
+        }
+    }
+
+
+
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+    
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Large mobile screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 425px){
+    :root {
+        --h1-font-size: 4rem;
+        --h2-font-size: 1.2rem;
+        --head-pharagraph: 16px; 
+
+        --pharagraph-size: 15px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 3rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 1rem;
+    }
+
+
+    
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+
+        .disc {
+            width: 100%;
+
+            h1 {
+                font-size: 1.4rem;
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+
+    .web-description > .img {
+        display: none;
+    }
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .galleries {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 0.1rem;
+        gap: 2rem;
+    }
+
+    .galleries > div {
+        width: 65vw;
+        height: 45vh;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 5rem);
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+        display: grid;
+        justify-content: center;
+
+        .about-img {
+            height: 20vh;
+            width: 100%;
+        }
+
+        .about-content {
+            height: 50vh;
+            width: 100%;
+
+            a {
+                font-size: var(--pharagraph-size);
+            }
+        }
+    }
+
+
+
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+
+    .s-a-container {
+        display: grid;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+
+        .s-a-img {
+            display: none;
+        }
+    }
+    
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Medium mobile screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 375px){
+    :root {
+        --h1-font-size: 3.5rem;
+        --h2-font-size: 1.2rem;
+        --head-pharagraph: 14px; 
+
+        --pharagraph-size: 13px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 2rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 1rem;
+    }
+
+
+    
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+
+        .disc {
+            width: 100%;
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .web-description > .img {
+        display: none;
+    }
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .galleries {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 0.1rem;
+        gap: 2rem;
+    }
+
+    .galleries > div {
+        width: 65vw;
+        height: 40vh;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 4.5rem);
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+        display: grid;
+        justify-content: center;
+
+        .about-img {
+            height: 20vh;
+            width: 100%;
+        }
+
+        .about-content {
+            height: 45vh;
+            width: 100%;
+
+            a {
+                font-size: var(--pharagraph-size);
+            }
+        }
+    }
+
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+
+    .s-a-container {
+        display: grid;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+
+        .s-a-img {
+            display: none;
+        }
+    }
+
+    
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Small mobile screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 320px) {
+    :root {
+        --h1-font-size: 3rem;
+        --h2-font-size: 1rem;
+        --head-pharagraph: 12px; 
+
+        --pharagraph-size: 12px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 0.5rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 1rem;
+    }
+
+
+
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+
+        .disc {
+            width: 100%;
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .web-description > .img {
+        display: none;
+    }
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .galleries {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 0.1rem;
+        gap: 2rem;
+    }
+
+    .galleries > div {
+        width: 65vw;
+        height: 35vh;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 4rem);
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+        display: grid;
+        justify-content: center;
+
+        .about-img {
+            height: 20vh;
+            width: 100%;
+        }
+
+        .about-content {
+            height: 45vh;
+            width: 100%;
+
+
+            a {
+                font-size: var(--pharagraph-size);
+            }
+        }
+    }
+
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+
+    .s-a-container {
+        display: grid;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+
+        .s-a-img {
+            display: none;
+        }
+    }
+
+
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+}
